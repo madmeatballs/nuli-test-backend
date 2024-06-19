@@ -1,0 +1,45 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Circuit {
+  id: ID!
+  name: String!
+  rounds: Int!
+  exercises: [Exercise!]!
+  workout: Workout!
+}
+
+type Exercise {
+  id: ID!
+  name: String!
+  sets: Int!
+  reps: Int
+  minReps: Int
+  maxReps: Int
+  secs: Int
+  minWeight: Int
+  maxWeight: Int
+  weight: Int
+  workout: Workout
+  circuit: Circuit
+  equipmentType: String!
+}
+
+type Workout {
+  id: ID!
+  name: String!
+  instructor: String!
+  equipments: [String!]!
+  warmup: [Exercise!]!
+  circuits: [Circuit!]!
+  duration: Int!
+}
+
+type Query {
+  getWorkouts: [Workout!]!
+}
+
+type Mutation {
+  createWorkout: Workout!
+}

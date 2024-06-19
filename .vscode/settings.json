@@ -1,0 +1,11 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "nulitestdb",
+      "database": "${workspaceFolder:test-backend}/nulitestdb.sqlite"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
